@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+      (function(h,o,u,n,d) {
+        h=h[d]=h[d]||{q:[],onReady:function(c){h.q.push(c)}}
+        d=o.createElement(u);d.async=1;d.src=n
+        n=o.getElementsByTagName(u)[0];n.parentNode.insertBefore(d,n)
+      })(window,document,'script','https://www.datadoghq-browser-agent.com/eu1/v5/datadog-rum.js','DD_RUM')
+      window.DD_RUM.onReady(function() {
+        window.DD_RUM.init({
+          clientToken: 'pub580c44bca8d5a15de698bc877baa29ff',
+          applicationId: '92efa96a-21a5-466b-a0b8-7c13729591ea',
+          site: 'datadoghq.eu',
+          service: 'test',
+          env: 'test',
+          // Specify a version number to identify the deployed version of your application in Datadog 
+          // version: '1.0.0', 
+          sessionSampleRate: 100,
+          sessionReplaySampleRate: 20,
+          trackUserInteractions: true,
+          trackResources: true,
+          trackLongTasks: true,
+          defaultPrivacyLevel: 'mask-user-input',
+        });
+      })
+    </script>
     <meta charset="UTF-8">
     <title>Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/icon.jpg">
